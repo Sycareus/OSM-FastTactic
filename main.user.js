@@ -2,9 +2,9 @@
 // @name         OSM Fast Tactic Setter
 // @namespace    OSM.Tactic.Setter
 // @version      0.4
-// @downloadURL  about:blank
-// @updateURL    about:blank
-// @description  Etablir rapidement quelques tactiques prédéfinies sur OSM
+// @downloadURL  https://github.com/Sycareus/OSM-FastTactic/blob/master/main.user.js
+// @updateURL    https://github.com/Sycareus/OSM-FastTactic/blob/master/main.user.js
+// @description  Etablir rapidement quelques tactiques prÃ©dÃ©finies sur OSM
 // @author       Sycarus
 // @include      http://*.onlinesoccermanager.com/Team/Tactic
 // @grant        GM_addStyle
@@ -213,7 +213,7 @@ contentSB.appendChild(perdre);
 contentSB.appendChild(gagner);
 contentSB.appendChild(recup);
 
-// et on ajoute tout ça à la page web
+// et on ajoute tout Ã§a Ã  la page web
 document.getElementById('divSidebarRight').appendChild(transp);
 
 
@@ -284,7 +284,7 @@ GM_addStyle('\
 var cursMental = document.createElement("input");
 cursMental.type = "number";
 cursMental.className = "us_curs_box";
-cursMental.label = "Mentalité";
+cursMental.label = "MentalitÃ©";
 cursMental.max = "100";
 cursMental.min = "0";
 cursMental.value = document.getElementById('Mentality').value;
@@ -319,7 +319,7 @@ contentSB2.appendChild(cursMental);
 contentSB2.appendChild(cursTempo);
 contentSB2.appendChild(cursPress);
 
-// et on ajoute tout ça à la page web
+// et on ajoute tout Ã§a Ã  la page web
 document.getElementById('divSidebarRight').appendChild(transp2);
 
 
@@ -345,7 +345,7 @@ function us_sendTactic(t)
     
     document.getElementById('btnConfirm2').name = "SUBMIT";
     document.forms[0].submit();
-    alert("Tactique modifiée, chargement en cours...");
+    alert("Tactique modifiÃ©e, chargement en cours...");
 }
 
 // fonction : "recuperer tactique de la page web"
