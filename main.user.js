@@ -10,16 +10,17 @@
 // @grant        GM_addStyle
 // ==/UserScript==
 
-// trouvable sur http://pastebin.com/p1k3p3UF  (v0.1)
-
-/* Variables contenant les tactiques :
+/* 
  * Note :
  * 0, 1, 2, 3 : style : mod, norm, agr, tor
  * 0, 1, 2, 3, 4 : mode : lb, p10, ailes, ca, tdl
  * 0, 1, 2 : lignes : def, mil, att
  * marking : true si indi, false si zone
  * hj : true si oui, false si non
+ * 
 */
+
+// Variables contenant les tactiques :
 
 var t442 = {
     style: 2,
@@ -263,10 +264,6 @@ contentContainer2.appendChild(contentSB2);
 contentContainer2.appendChild(bottom2);
 
 //ajout des feuilles de style dans la page
-
-/*var css_form = document.createElement("style");
-css_form.
-css_form.innerHTML = "*/
 GM_addStyle('\
    .us_curs_box\
    {\
@@ -290,6 +287,8 @@ cursMental.min = "0";
 cursMental.value = document.getElementById('Mentality').value;
 document.getElementById('Mentality').onchange = function(){cursMental.value = this.value;};
 cursMental.onchange = function (){document.getElementById('Mentality').value = this.value;};
+cursMental.oninput = "document.getElementById('Mentality').value = cursMental.value";
+document.getElementById('Mentality').oninput = "cursMental.value = document.getElementById('Mentality').value";
 cursMental.setAttribute("style", "width:126px;text-align:center;font-size:17px;margin-top:10px;");
 
 var cursTempo = document.createElement("input");
